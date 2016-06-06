@@ -9,21 +9,22 @@ of the pattering suddenly quickens.  You have two choices: Click 'OK' to stand s
 or Click 'CANCEL' to retreat quickly and exit from the door you entered. What do you do?";
       var stringchoice2 = "You stand your ground confront your fear.  A large creature covered in brown and white \
 fur with large white teeth suddenly appears at the top of the stairs.  Fear again grips until the creature speaks: \"I am Soft Dog. \
-Do you have any treats?! I LOVE TREATS and PETS! You have two choices: Click 'OK' to give the Soft Dog a treat \
-or Click 'CANCEL' to not give the Soft Dog a treat?";
+Do you have any treats?! I LOVE TREATS and PETS!\" You have two choices: Click 'OK' to give the Soft Dog a treat \
+or Click 'CANCEL' to not give the Soft Dog a treat.";
       var stringresult1 = "You attempt to exit from the door in which you came, but find the door is locked.  You now have no choice but to stand your ground and confront your fear.";
       var alert1 = "You give the Soft Dog a treat and she wags her tails in great excitement, quickly moving to one of her 30 beds to devour the treat.  You have made a friend for life.";
       var alert2 = "You do not give the Soft Dog a treat.  She lays down in sadness.  As you realize how sad the Soft Dog is, a single tear runs down your left eye.  Out of pity, you give the Soft Dog numerous pets. \
       Soft Dog rolls on her back to assist you with your pets, and wags her tail.  You have made a friend for life."
       var choice1 = confirm(stringchoice1);
-      if (choice1 === true) {
+      // the next line is saying that if choice 1 = true, then choice2 is whatever stringchoice2 is.  All objects, which are the things inside (), are by default true.  Therefore, it is redunant to state if == true.
+      if (choice1) {
         var choice2 = confirm(stringchoice2)
       }
       else {
         alert(stringresult1)
         var choice2 = confirm(stringchoice2)
       };
-      if (choice2 === true) {
+      if (choice2) {
         alert(alert1)
       }
       else {
@@ -32,8 +33,7 @@ or Click 'CANCEL' to not give the Soft Dog a treat?";
     </script>
   </head>
   <body>
-  </body>
-  <footer>
+    <!-- The footer is always in the body elements.  The rule is that anything that displays on the page should be in the body.  -->
     <p>Created by Joe Viviano</p>
-  </footer>
+  </body>
 </html>
